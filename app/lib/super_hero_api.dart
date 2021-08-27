@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:superherowikiapp/main.dart';
 import 'package:superherowikiapp/responses.dart';
 
+import 'package:superherowikiapp/character_data.dart';
+
 class SuperHeroAPIPage extends StatefulWidget {
   const SuperHeroAPIPage({Key? key}) : super(key: key);
 
@@ -61,11 +63,14 @@ class _SuperHeroAPIPageState extends State<SuperHeroAPIPage> {
                 appBar: AppBar(
                   title: Text(titleText),
                 ),
-                body: Column(
-                  children: <Widget>[
-                    Image.network(superHero.heroImage.url),
-                    Text(superHero.name),
-                  ],
+                body:  SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      CharacterData(superHero: superHero),
+                      // Image.network(superHero.heroImage.url),
+                      // Text(superHero.name),
+                    ],
+                  ),
                 ),
               );
             } else if (snapshot.hasError) {
@@ -105,7 +110,7 @@ class SuperHeroLineupPage extends StatelessWidget {
         appBar: AppBar(
           title: Text(titleText),
         ),
-        body: Center(
+        body: SingleChildScrollView(
           child: SuperHeroPage(superHero: superHeroList[index]),
         ),
       );
@@ -113,7 +118,6 @@ class SuperHeroLineupPage extends StatelessWidget {
 
   }
 }
-
 
 class SuperHeroPage extends StatelessWidget { 
 
@@ -124,13 +128,10 @@ class SuperHeroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
               
-    return Center(
-      child: Column(
-        children: <Widget>[
-          Image.network(superHero.heroImage.url),
-          Text(superHero.name),
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        CharacterData(superHero: superHero),
+      ],
     );
 
   }
