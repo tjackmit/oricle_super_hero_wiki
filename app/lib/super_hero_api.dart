@@ -67,8 +67,6 @@ class _SuperHeroAPIPageState extends State<SuperHeroAPIPage> {
                   child: Column(
                     children: <Widget>[
                       CharacterData(superHero: superHero),
-                      // Image.network(superHero.heroImage.url),
-                      // Text(superHero.name),
                     ],
                   ),
                 ),

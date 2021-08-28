@@ -181,7 +181,7 @@ class CharacterBiography extends StatelessWidget {
     return Column(
       children: <Widget>[
         Text(
-          'fullName: ' + fullName,
+          'Full Name: ' + fullName,
           style: TextStyle(
             // color: AppTheme.green[65],
             fontSize: 18,
@@ -190,7 +190,7 @@ class CharacterBiography extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          'alterEgos: ' + alterEgos,
+          'Alter Egos: ' + alterEgos,
           style: TextStyle(
             // color: AppTheme.green[65],
             fontSize: 18,
@@ -208,7 +208,7 @@ class CharacterBiography extends StatelessWidget {
         CharacterAliasesList(aliases),
         SizedBox(height: 10),
         Text(
-          'placeOfBirth: ' + placeOfBirth,
+          'Place Of Birth: ' + placeOfBirth,
           style: TextStyle(
             // color: AppTheme.green[65],
             fontSize: 18,
@@ -217,7 +217,7 @@ class CharacterBiography extends StatelessWidget {
         ),
         SizedBox(height: 10),
         Text(
-          'firstAppearance: ' + firstAppearance,
+          'First Appearance: ' + firstAppearance,
           style: TextStyle(
             // color: AppTheme.green[65],
             fontSize: 18,
@@ -376,8 +376,8 @@ class CharacterConnections extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text('groupAffiliation: ' + groupAffiliation),
-        Text('relatives: ' + relatives),
+        Text('Group Affiliation: ' + groupAffiliation),
+        Text('Relatives: ' + relatives),
       ],
     );
   }
