@@ -37,7 +37,29 @@ class _SuperHeroAPIPageState extends State<SuperHeroAPIPage> {
                 superHeroList: snapshot.data!.results
               );
             } else if (snapshot.hasError) {
-              return Text('${snapshot.error}');
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text("Error",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                body:  SingleChildScrollView(
+                  child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Text('An error has occurred.... ',
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 10),
+                        Text('${snapshot.error}',
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              );
             }
             // By default, show a loading spinner.
             return Center(
@@ -72,7 +94,29 @@ class _SuperHeroAPIPageState extends State<SuperHeroAPIPage> {
                 ),
               );
             } else if (snapshot.hasError) {
-              return Text('${snapshot.error}');
+              return Scaffold(
+                appBar: AppBar(
+                  title: Text("Error",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                body:  SingleChildScrollView(
+                  child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 10),
+                        Text('An error has occurred.... ',
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 10),
+                        Text('${snapshot.error}',
+                          textAlign: TextAlign.center,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              );
             }
             // By default, show a loading spinner.
             return Center(
